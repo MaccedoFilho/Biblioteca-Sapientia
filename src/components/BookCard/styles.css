@@ -1,0 +1,364 @@
+/* Estilos para os cartões de livros */
+.book-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.book-cover {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.book-card:hover .book-title {
+  color: var(--primary-color);
+}
+
+.book-author {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-genre {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 500;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.book-card:hover .book-genre {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+  color: #f8c12c;
+  margin-right: 8px;
+}
+
+.rating-count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.book-action {
+  margin-top: 15px;
+}
+
+.wishlist-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-badge svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2px;
+  transition: var(--transition);
+}
+
+.wishlist-badge:hover {
+  background-color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-badge.active {
+  background-color: var(--secondary-color);
+}
+
+.wishlist-badge.active svg {
+  fill: white;
+  stroke: white;
+}
+
+.button-view {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: var(--text-dark);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.button-view:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões de ação nos cards */
+.book-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.book-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: var(--background-light);
+  border: 1px solid var(--text-muted);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-dark);
+  font-size: 13px;
+  transition: var(--transition);
+  flex: 1;
+  min-width: 80px;
+  min-height: 36px;
+}
+
+.book-action-btn svg {
+  flex-shrink: 0;
+  min-width: 14px;
+}
+
+.book-action-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+
+.book-action-btn:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.book-action-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .book-cover {
+    height: 250px;
+  }
+  
+  .book-info {
+    padding: 15px;
+  }
+  
+  .book-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .book-author {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .book-genre {
+    font-size: 11px;
+    padding: 4px 8px;
+    margin-bottom: 12px;
+  }
+  
+  .wishlist-badge {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .wishlist-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .button-view {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .book-actions {
+    margin-top: 12px;
+    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .book-action-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .book-action-btn span {
+    font-size: 11px;
+  }
+  
+  .book-action-btn:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover {
+    height: 200px;
+  }
+  
+  .book-info {
+    padding: 12px;
+  }
+  
+  .book-title {
+    font-size: 15px;
+    -webkit-line-clamp: 2;
+    margin-bottom: 5px;
+  }
+  
+  .book-author {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .book-genre {
+    font-size: 10px;
+    padding: 3px 7px;
+    margin-bottom: 10px;
+  }
+  
+  .rating-stars svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .rating-count {
+    font-size: 12px;
+  }
+  
+  .book-action {
+    margin-top: 12px;
+  }
+  
+  .wishlist-badge {
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    left: 8px;
+  }
+  
+  .wishlist-badge svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .book-actions {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  
+  .book-action-btn {
+    width: 100%;
+    padding: 8px 5px;
+    font-size: 11px;
+    min-height: 34px;
+  }
+  
+  .book-action-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .book-action-btn span {
+    font-size: 10px;
+  }
+  
+  .book-action-btn:last-child {
+    grid-column: span 2;
+  }
+} 
