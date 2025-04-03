@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Biblioteca-Sapientia/static/css/main.b681573a.css",
+    "main.js": "/Biblioteca-Sapientia/static/js/main.46d1e4c2.js",
+    "index.html": "/Biblioteca-Sapientia/index.html",
+    "main.b681573a.css.map": "/Biblioteca-Sapientia/static/css/main.b681573a.css.map",
+    "main.46d1e4c2.js.map": "/Biblioteca-Sapientia/static/js/main.46d1e4c2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b681573a.css",
+    "static/js/main.46d1e4c2.js"
+  ]
+}
