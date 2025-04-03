@@ -51,7 +51,7 @@ const MainLayout = ({ children, setCurrentPage, currentPage, setSearchTerm }) =>
       <header className={`app-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-content">
           <h1 className="logo" onClick={() => handlePageChange('home')}>
-            Literária
+            Biblioteca Sapientia
           </h1>
           
           <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Menu">
