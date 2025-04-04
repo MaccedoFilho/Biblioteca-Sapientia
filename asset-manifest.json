@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Biblioteca-Sapientia/static/css/main.b681573a.css",
-    "main.js": "/Biblioteca-Sapientia/static/js/main.46d1e4c2.js",
+    "main.css": "/Biblioteca-Sapientia/static/css/main.5a222837.css",
+    "main.js": "/Biblioteca-Sapientia/static/js/main.f6481d73.js",
     "index.html": "/Biblioteca-Sapientia/index.html",
-    "main.b681573a.css.map": "/Biblioteca-Sapientia/static/css/main.b681573a.css.map",
-    "main.46d1e4c2.js.map": "/Biblioteca-Sapientia/static/js/main.46d1e4c2.js.map"
+    "main.5a222837.css.map": "/Biblioteca-Sapientia/static/css/main.5a222837.css.map",
+    "main.f6481d73.js.map": "/Biblioteca-Sapientia/static/js/main.f6481d73.js.map"
   },
   "entrypoints": [
-    "static/css/main.b681573a.css",
-    "static/js/main.46d1e4c2.js"
+    "static/css/main.5a222837.css",
+    "static/js/main.f6481d73.js"
   ]
 }
